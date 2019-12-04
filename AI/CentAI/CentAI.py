@@ -1,4 +1,4 @@
-# kaiway.itch.io
+# kaiway.itch.io/centa
 # https://keon.io/deep-q-learning/
 # https://pythonprogramming.net/game-frames-open-cv-python-plays-gta-v/
 
@@ -79,12 +79,12 @@ def main():
     death_flag = process_img(capture_ss())[death_loc[1], death_loc[0]]
     print("starting")
 
+    time.sleep(2)
+
     # repeat episode_num times
     for e in range(episode_num):
         pyautogui.keyDown('tab')
         pyautogui.keyUp('tab')
-
-        time.sleep(2)
 
         score = 0
         dead = False
@@ -123,7 +123,6 @@ def main():
             last_time = time.time()
             action = agent.act(scr_vector)
             act(action)
-            cv2.imshow("asdf", pro_scr)
             last_scr = pro_scr
             last_scr_vector = scr_vector
 
